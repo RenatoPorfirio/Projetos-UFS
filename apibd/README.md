@@ -8,9 +8,10 @@ A aplicação trabalha com servidores postgresql, portanto, é necessário que h
 Módulos python necessários:  
   
 => pyscopg2 (módulo para trabalhar com o postgresql - ver documentação em https://www.psycopg.org/docs/)  
-comando de instalação: pip install psycopg2  
-                          ou  
-                       pip install psycopg2-binary  
+comando de instalação: 
+                       ```pip install psycopg2```  
+                                    ou  
+                       ```pip install psycopg2-binary```  
   
 => flask (módulo responsável pelo servidor http - ver documentação em https://flask.palletsprojects.com/en/2.2.x/0)  
 comando de instalação: pip install flask  
