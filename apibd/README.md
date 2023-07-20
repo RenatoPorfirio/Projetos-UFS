@@ -1,8 +1,8 @@
 # apibd  
   
 Autor: Renato Porfirio Santos Xavier  
-  
-#Dependencias:  
+*** 
+# Dependencias:  
   
 A aplicação trabalha com servidores postgresql, portanto, é necessário que haja um servidor para conectar-se.  
 Módulos python necessários:  
@@ -14,8 +14,8 @@ comando de instalação: pip install psycopg2
   
 => flask (módulo responsável pelo servidor http - ver documentação em https://flask.palletsprojects.com/en/2.2.x/0)  
 comando de instalação: pip install flask  
-   
-#Funcionamento  
+***
+# Funcionamento  
 A aplicação contém três arquivos auxiliares: dbconfig.txt, help.txt, index.html  
 =>dbconfig.txt: Responsável pelas configurações de conexão com o banco de dados.  
                 - HOST: representa o endereço do host que hospeda o banco de dados;  
@@ -24,7 +24,7 @@ A aplicação contém três arquivos auxiliares: dbconfig.txt, help.txt, index.h
                 - NAME: nome do banco de dados que deseja conectar-se;  
 =>help.txt    : Texto do menu de ajuda da ferramenta;  
 =>index.html  : Homepage do servidor da API, onde é possível testar o seu funcionamento;  
- ######################################################################################  
+ ***
  O arquivo principal da aplicação é o apistart.py. Este, importa todos os módulos e arquivos necessários para o correto funcionamento.  
  Para saber como utilizar a ferramenta, abra o arquivo help.txt ou execute o comando:  
  python3 apistart.py --help  
