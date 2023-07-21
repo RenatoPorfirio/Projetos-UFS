@@ -1,3 +1,0 @@
-[submodule "myhttpserver"]
-	path = myhttpserver
-	url = ./myhttpserver
