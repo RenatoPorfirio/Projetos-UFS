@@ -1,0 +1,29 @@
+molde NoNumerico contem
+
+  constante: Numero valor;
+  objeto: NoNumerico proximo;
+
+fim
+
+molde PilhaNumerica contem
+
+  constante: Numero tamanho;
+  objeto: NoNumerico inicio;
+  
+  funcao: PilhaNumerica empilhar(Numero valor)[
+    objeto: NoNumerico no;
+    objeto: PilhaNumerica pilha;
+    no = NoNumerico [objeto.valor = valor | objeto.proximo = inicio];
+    pilha = PilhaNumerica [objeto.tamanho = tamanho + 1 | objeto.inicio = no];
+    pilha;
+  ]
+  
+  funcao: PilhaNumerica desempilhar()[
+    objeto: PilhaNumerica copia;
+    copia = se (tamanho == 0)
+              entao PilhaNumerica [objeto.tamanho = 0 | objeto.inicio = inicio]
+              senao PilhaNumerica [objeto.tamanho = tamanho - 1 | objeto.inicio = inicio.proximo]
+    copia;
+  ]
+
+fim

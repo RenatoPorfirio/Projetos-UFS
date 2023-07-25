@@ -1,0 +1,54 @@
+molde JogadorFutebol se passa por Jogador; molde JogadorBasquete se passa por Jogador.
+
+molde Jogador contem
+
+  constante: Numero idade;
+  constante: Numero qtd_titulos;
+  constante: Numero salario;
+
+  funcao: Texto classificar_salario();
+
+fim
+
+molde JogadorFutebol contem
+
+  funcao: Texto classificar_salario()[
+    constante: Numero fator = (7000 * qtd_titulos + 3 * salario - 5000 * idade) / 1500;
+    se (fator < 1000) 
+      entao "Baixo"
+      senao se (fator <= 1500) 
+              entao "Medio"
+              senao "Alto"
+  ]
+
+fim
+
+molde JogadorBasquete contem
+
+  funcao: Texto classificar_salario()[
+    constante: Numero fator = (2 * salario + 1000 * qtd_titulos * idade) / 2000;
+    se (fator < 1000) 
+      entao "Baixo"
+      senao se (fator <= 1500) 
+        entao "Medio"
+        senao "Alto"
+  ]
+
+fim
+
+
+-- ************************ CHAMADA PRINCIPAL ************************
+molde Principal contem
+
+>> funcao: Texto principal()[
+  -- Instaciação dos Objetos
+  objeto: Comunicacao interface;
+  objeto: JogadorFutebol jogador_fut [objeto.idade = 22 | objeto.qtd_titulos = 7 | salario = 15000];
+  objeto: JogadorBasquete jogador_basq [objeto.idade = 31 | objeto.qtd_titulos = 3 | salario = 3400];
+
+  -- Invocação das Funções
+  interface.escreva(jogador_fut.classificar_salario());
+  interface.escreva(jogador_basq.classificar_salario());
+
+  ]
+fim
